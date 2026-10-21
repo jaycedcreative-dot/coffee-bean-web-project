@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bean Boutique | Menu </title>
+
+    <!-- Bootstrap Icons CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!--Toastify Plugin-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Swiper Plugin CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+    <!--Main stylesheet for evry pages-->
+        <link rel="stylesheet" href="css/style.css">
+
+            <!-- Light Box Plugin-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+    <!--stylesheet for product page-->
+        <link rel="stylesheet" href="css/style_product.css">
+</head>
+<body>
+    <!--Header portion, Header for every pages-->
+    <header class="header-container">
+        <a href="index.html" class="logo"><i class="bi bi-cup-hot-fill"> </i>
+             Bean Boutique</a>
+            <!--Right side of header-->
+        <div class="right-header">
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Our Menu</a></li>
+                    <li><a href="equipment.html">Equipments</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="offer.html">Offers</a></li>
+                </ul>
+            </nav>
+                <!--Shopping Cart Control-->
+            <div class="cart-container">
+                <button class="cart-icon-btn" id="cartToggleBtn"
+                    aria-label="--Shopping Cart">
+                    🛒<span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+                <!-- Hamburger Menu Control(Responsive Screen Size)-->
+            <button class="hamburger" id="hamburgerBtn"
+                aria-label="Toogle Navigation">
+                ☰ Menu
+            </button>
+        </div>
+    </header>
+
+    <main>
+            <!--Search Box-->
+        <div class="search-container">
+            <h1>What shall we deliver?</h1>
+            <input type="text" id="searchInput"
+            class="search-box" placeholder="Search.....">
+        
+        
+
+            <!-- category box for product from JS-->
+        <div class="category-container" id="categoryContainer">
+
+        </div>
+         </div>
+
+            <!--Product Items Portion From JS-->
+        <div class="product-grid" id="productGrid">
+
+        </div>
+
+            <!--Dynamic Not Found Container-->
+        <div class="no-products hidden" id="notFound">
+            
+        </div>
+
+        
+
+
+        <!-- About Us Portion -->
+        <section class="home-about-banner" style="background-image: url('images/CoffeeBeans.jpg');">
+            <div class="banner-overlay-content">
+                <div class="overlay-text">
+                    <h2>Essentials for a better everyday.</h2>
+                    <p>Explore our full collection of thoughtfully made coffee and lifestyle products.</p>
+                    <a href="" class="banner-btn">ABOUT US</a>
+                </div>
+            </div>
+        </section>
+    </main>
+        <!--Footer portion, Footer for every pages-->
+    <footer class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col brand-col">
+            <a href="index.html" class="footer-logo"><i class="bi bi-cup-hot-fill"> </i>
+                Bean Boutique
+            </a>
+        </div>
+
+        <div class="footer-col links-col">
+            <a href="index.html">Home</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+            <div class="footer-col social-col">
+                <a href="#" aria-label="FaceBook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+            <div class="footer-bottom">
+                <p>&copy; by Min Khant Ko 224815 Strategy First International College.</p>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+        <!-- Toastify Plugin JS-->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+        <!--Main JS-->
+            <!--Script for all page-->
+        <script src="js/script.js"></script>
+            <!--Script for product page-->
+        <script src="js/script_product.js"></script>
+
+</body>
+</html>

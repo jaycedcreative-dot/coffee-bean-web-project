@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bean Boutique | Offer </title>
+        <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Toastify Plugin CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+        <!-- Bootstrap Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style_offer.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Header portion, Header for every pages-->
+    <header class="header-container">
+        <a href="index.html" class="logo"><i class="bi bi-cup-hot-fill"> </i>
+             Bean Boutique</a>
+            <!--Right side of header-->
+        <div class="right-header">
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Our Menu</a></li>
+                    <li><a href="equipment.html">Equipments</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="offer.html">Offers</a></li>
+                </ul>
+            </nav>
+                <!--Shopping Cart Control-->
+            <div class="cart-container">
+                <button class="cart-icon-btn" id="cartToggleBtn"
+                    aria-label="--Shopping Cart">
+                    🛒<span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+                <!-- Hamburger Menu Control(Responsive Screen Size)-->
+            <button class="hamburger" id="hamburgerBtn"
+                aria-label="Toogle Navigation">
+                ☰ Menu
+            </button>
+        </div>
+    </header>
+
+        <!-- Main Content Area -->
+    <main class="main-layout">
+            <!-- Limite time offer banner-->
+        <section class="banner-section">
+            <div class="banner-content">
+                    
+                <div class="banner-info">
+                    <span class="offer-badge"><i class="bi bi-lightning-charge-fill"></i>
+                        Special Limited Offer</span>
+                    <h1>Get 30% off Annual Memeberships!</h1>
+                    <p> Unlock premium perks, Priority Delivery
+                        and exclusive monthly deals. Offer end soon!</p>
+                </div>
+
+                <div class="banner-timer-area">
+                    <div class="timer-wrapper">
+                            <!--The remaining hours will show here-->
+                        <div class="timer-box">
+                            <span class="timer-num" id="timerHr">12</span>
+                            <span class="timer-label">Hours</span>
+                        </div>
+                                <!--The remaining minutes will show here-->
+                            <span class="timer-colon">:</span>
+                            <div class="timer-box">
+                                <span class="timer-num" id="timerMin">45</span>
+                                <span class="timer-label">Minutes</span>
+                            </div>
+                            <!--The remaining seconds will show here-->
+                        <span class="timer-colon">:</span>
+                        <div class="timer-box">
+                            <span class="timer-num" id="timerSec">30</span>
+                            <span class="timer-label">Seconds</span>
+                        </div>
+                    </div>
+                        <button class="claim-btn">
+                            <i class="bi bi-gift-fill"></i> Claim Discount
+                        </button>
+                </div>
+            </div>
+        </section>
+
+            <!-- Subscription Header and ToggleSwitch portion-->
+        <section class="plan-header">
+            <h2>Subscription Plans</h2>
+            <p>Choose the membership tier that ftis yor needs best.</p>
+
+                <!--Toogle is here, It can swith plan monthly or yearly-->
+                    <!-- I used bootstrap 5 for this portin stylelish
+                     | pure css for the switch deisgn I want is too crowded-->
+            <div class="d-flex align-items-center justify-content-center gap-2 mt-4">
+                <span class="fw-semibold me-3 
+                tex-muted" id="labelMonthly">Monthly</span>
+                    <!-- Using bootsrtap 5 for built-in switch-->
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" role="switch"
+                        id="billingToggle" style="cursor: pointer;">
+                </div>
+                    <span class="fw-semibold ms-lg-3" id="labelYearly">
+                        Yearly
+                        <span class="badge bg-success-subtle text-success 
+                        border border-success rounded-pill ms-1 fs-6">
+                            Save 20%
+                        </span>
+                    </span>
+            </div>
+        </section>
+
+            <!-- Subscription Card Grid Portion-->
+        <section class="plans-grid">
+                <!-- Starter Plan-->
+            <div class="plan-card">
+                <div class="plan-card-body">
+                    <h3 class="plan-title"> Coffe Lover</h3>
+                    <p class="plan-desc"> For casual coffee lover and everyday visits.</p>
+                        <div class="plan-price-wrap">
+                            <span class="price-amount" id="priceStarter">$9.99</span>
+                            <span class="price-amount" id="periodStarter">/month</span>
+                        </div>
+                            <hr class="plan-divider">
+                        <ul  class="feature-list">
+                            <li><i class="bi bi-check-circle-fill icon-check"></i>Member Price on Coffee</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i>  Free Coffee Tasting</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Exclusive Coffee Blends</li>
+                            <li class="disabled"><i class="bi bi-x-circle-fill icon-cross"></i> Birthday Month Discounts</li>
+                            <li class="disabled"><i class="bi bi-x-circle-fill icon-cross"></i> Unlimited Event Access</li>
+                        </ul>
+                    <button class="plan-btn">
+                        Choose Coffee Lover
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pro Plan , The Popular One-->
+            <div class="plan-card popular-card">
+                    <!--The Popular Tag-->
+                <div class="popular-tag">
+                    <i class="bi bi-star-fill"></i> Most Popular
+                </div>
+                <div class="plan-card-body">
+                    <h3 class="plan-title"> Coffee Plus</h3>
+                    <p class="plan-desc"> Extra benefits for regular coffee lovers..</p>
+                        <div class="plan-price-wrap">
+                            <span class="price-amount" id="pricePro">$24.99</span>
+                            <span class="price-amount" id="periodPro">/month</span>
+                        </div>
+                            <hr class="plan-divider">
+                        <ul  class="feature-list">
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Free Delivery Coffee</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Free Coffee Tasting</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Birthday Month Discounts</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Exclusive Coffee Blends</li>
+                            <li class="disabled"><i class="bi bi-x-circle-fill icon-cross"></i> Unlimited  Event Access</li>
+                        </ul>
+                    <button class="plan-btn btn-highlight">
+                        Choose Coffee Plus
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- VIP Plan-->
+            <div class="plan-card">
+                <div class="plan-card-body">
+                    <h3 class="plan-title"> Coffee Club</h3>
+                    <p class="plan-desc">The ultimate experience for coffee connpisseurs</p>
+                        <div class="plan-price-wrap">
+                            <span class="price-amount" id="priceVIP">$49.99</span>
+                            <span class="price-amount" id="periodVIP">/month</span>
+                        </div>
+                            <hr class="plan-divider">
+                        <ul  class="feature-list">
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Free Same-Day Delivery</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> VIP Exclusive Blends</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Birthday Month Discounts & Gift Box</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Premium Exclusive Blends</li>
+                            <li><i class="bi bi-check-circle-fill icon-check"></i> Unlimited Event Access</li>
+                        </ul>
+                    <button class="plan-btn">
+                        Choose Coffee Club
+                    </button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+        <!--Footer portion, Footer for every pages-->
+    <footer class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col brand-col">
+            <a href="index.html" class="footer-logo"><i class="bi bi-cup-hot-fill"> </i>
+                Bean Boutique
+            </a>
+        </div>
+
+        <div class="footer-col links-col">
+            <a href="index.html">Home</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+            <div class="footer-col social-col">
+                <a href="#" aria-label="FaceBook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+            <div class="footer-bottom">
+                <p>&copy; by Min Khant Ko 224815 Strategy First International College.</p>
+            </div>
+    </footer>
+        
+        <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Toastify Plugin JS-->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="js/offer_script.js"></script>
+        <!--Main JS-->
+        <!--Script for all page-->
+        <script src="js/script.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            startCountdownTimer();
+        })
+        //Live Countdown timer
+        function startCountdownTimer(){
+            
+            let totalSec=(12*3600)+(45*60)+30;//12:45:30
+            setInterval(()=>{
+                if(totalSec<=0) return;
+                totalSec--;
+
+                const h=Math.floor(totalSec/3600);
+                const min=Math.floor((totalSec%3600)/60);
+                const sec=totalSec%60;
+
+                document.getElementById("timerHr").textContent=String(h).padStart(2,'0');
+                document.getElementById("timerMin").textContent=String(min).padStart(2,'0');
+                document.getElementById("timerSec").textContent=String(sec).padStart(2,'0');
+            },1000);//one mill(1sec) work with this function
+        }
+        
+    </script>
+</body>
+</html>

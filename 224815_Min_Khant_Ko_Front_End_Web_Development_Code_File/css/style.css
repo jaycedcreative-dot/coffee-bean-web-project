@@ -1,0 +1,496 @@
+/*Base Layout Reset & Sticky Footer setup*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    height: 100%;
+}
+body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #EDEEE9;
+        
+}
+
+    /*Stylish for header portion*/
+.header-container{
+    background-color: #1A3637;
+    color: #ffffff;
+    padding: 1.2rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    box-shadow: 0 5px 10px rgba(25, 10, 0, 0.5);
+    transition: padding 0.5s ease,
+                background-color 0.5s ease,
+                box-shadow 0.3s ease;
+    
+    /*border: 1px black solid;*/
+}
+.logo{
+    font-size: 22px;
+    font-weight: bold;
+    color: #E1D4C2;
+    text-decoration: none;
+}
+.right-header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+    /* Navigation Group link Stylish*/
+.nav-menu{
+    display: flex;
+    list-style-type:none;
+    gap: 1.2rem;
+}
+
+.nav-menu a{
+    color: #EDEEE9;
+    text-decoration: none;
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.nav-menu a:hover{
+    color: #EDEEE9;
+    font-weight: bold;
+    background-color: #A78D78;
+}
+
+/*Shooping Cart Button Stulish*/
+.cart-icon-btn{
+    background: none;
+    border: none;
+    color:#fff;
+    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+.cart-badge{
+    background-color: #e74c3c;
+    color:#fff;
+    font-size: 11px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    min-width:18px;
+    text-align: center;
+    /*count aligment */
+    position:absolute;
+    top:-2px;
+    right:-2px;
+}
+/* Hamburger Icon Stylish*/
+.hamburger{
+    /*hide this button*/
+    display: none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size: 1.2rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+ 
+}
+    /*Stylish for main portion*/
+main{
+    flex:1 0 auto;
+}
+
+/* 1. Hero / Swiper Section */
+.home-hero-section {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.heroSwiper {
+    width: 100%;
+    height: 480px; /* Slider height */
+}
+
+.hero-slide-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark Overlay for readable text */
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-text-content {
+    max-width: 550px;
+    color: #ffffff;
+}
+
+.hero-text-content h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero-text-content p {
+    font-size: 1.05rem;
+    color: #EDEEE9;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 11px 26px;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #ffffff;
+    color: #1A3637;
+}
+
+/* Custom Swiper Bullets */
+.swiper-pagination-bullet {
+    background: #ffffff !important;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff !important;
+    opacity: 1;
+    width: 24px;
+    border-radius: 10px;
+}
+
+ /* Stylelish for Feature Sections */ 
+    /* For Home Page Only*/
+.home-features-container {
+    max-width: 1100px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+.feature-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 70px;
+}
+.feature-img-wrap {
+    flex: 1;
+}
+.feature-img-wrap img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.feature-info {
+    flex: 1;
+}
+.feature-num {
+    font-size: 1.8rem;
+    color: #A78D78;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.feature-info h2 {
+    font-size: 1.6rem;
+    color: #1A3637;
+    margin-bottom: 12px;
+}
+.feature-info p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.feature-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #1A3637;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+.feature-link:hover {
+    color: #A78D78;
+}
+
+
+
+.home-about-banner {
+    background-image: url("../images/CoffeeBeans.jpg");
+    width: 100%;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 0;
+}
+.banner-overlay-content {
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 54, 55, 0.5); /* Theme Color Dark Overlay */
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.overlay-text {
+    max-width: 480px;
+    color: #ffffff;
+}
+.overlay-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+.overlay-text p {
+    font-size: 0.95rem;
+    color: #EDEEE9;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.banner-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1px solid #ffffff;
+    border-radius: 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+.banner-btn:hover {
+    background-color: #ffffff;
+    color: #1A3637;
+}
+/* Popup Message Portion*/
+.discount-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadein 0.5s ease-in-out forwards;
+}
+.discount-content{
+    background: #D2C5B2;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px rgba(0, 94, 94, 1.5);
+}
+.discount-close-btn{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+}
+.discount-content h2{
+    text-transform: uppercase;
+
+}
+.discount-content p{
+    color: #382a21;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+#discountForm input{
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius:10px ;
+}
+#discountForm input :focus{
+    border: 1px solid #1A3637;
+}
+#discountForm button{
+    padding: 10px 25px;
+    border-radius: 12px;
+    background: lightgreen;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: forestgreen;
+    cursor: pointer;
+
+}
+#sendMsg{
+    margin-top: 10px;
+    color: forestgreen;
+    display: none;
+}
+
+    /* Stylish for footer portion*/
+.footer-container{
+    flex-shrink: 0;
+    background-color: #1A3637;
+    padding: 1.5rem;
+    margin-top: 0;
+    /*width: 100%;
+    
+    position: fixed;
+    bottom: 0;*/
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.footer-logo{
+    color: #F3EDE6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+.links-col{
+    display: flex;
+    gap: 15px;
+}
+.links-col a{
+    color: #F3EDE6;
+    text-decoration: none;
+    font-size: 16px;
+}
+.links-col a:hover {
+    color: #2EC4B6;
+}
+.social-col{
+    display: flex;
+    gap: 15px;
+}
+.social-col a{
+    text-decoration: none;
+    color: #F3EDE6;
+}
+.social-col a:hover{
+    color: #10b981;
+    font-size: 16px;
+}
+.footer-container *{
+    pointer-events: auto;
+}
+.footer-bottom{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.8rem;
+    color: #E1D4C2;
+}
+
+.hidden {
+    display: none !important;
+}
+    /*Toastify plugin Customize Stylish*/
+.toast-custom{
+    font-family: inherit !important;
+    border-radius: 10px !important;
+    font-weight: 200 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    color:#000000;
+    z-index: 99999 !important;
+}
+.toast-info{background:#3b82f6 !important;}
+.toast-success{background:#10b981 !important;}
+.toast-danger{background: #ef4444 !important;}
+
+    /*Responsive Styles(Screen width <=768px)*/
+    /*user resize the screen or use on mobile */
+    /* this style will do when screen size is less than 768px*/
+@media screen and (max-width:768px) {
+    .hamburger{
+        display: flex;
+        
+    }
+    .nav-menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        background-color: #1A3637;
+        padding: 1rem 0;
+        text-align: center;
+        overflow: hidden;
+    }
+    .nav-menu.active{
+        display: flex;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+     .heroSwiper .swiper-slide, .feature-row, .feature-row.reverse {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .feature-row.reverse {
+        flex-direction: row;
+    }
+    .hero-text-content h1 {
+        font-size: 2rem;
+    }
+    .hero-img-box img,
+    .feature-img-wrap img {
+        height: 240px;
+    }
+     .banner-overlay-content {
+        padding: 0 20px;
+    }
+    .overlay-text h2 {
+        font-size: 1.4rem;
+    }  
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{opacity: 1;}
+}

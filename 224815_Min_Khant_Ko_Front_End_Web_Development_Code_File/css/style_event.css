@@ -1,0 +1,342 @@
+.main-layout{
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3e2723; /* Deep Coffee Brown */
+    margin-bottom: 6px;
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+/* Stylelish for Previous events section */
+.previous-events-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.previous-events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.completed-event {
+    background-color: #f8f9fa;
+    border: 1px dashed #ced4da !important;
+}
+
+.event-badge.completed {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+.text-muted {
+    color: #adb5bd !important;
+}
+
+/* Event Cards & Registration Form Layout */
+.event-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/*  Left Column: Cards  */
+.events-column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.event-card {
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.event-card:hover {
+    border-color: #d7ccc8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.event-card.selected {
+    border-color: #006633; /* Signature Color of OurCafe */
+    background-color: #fffdfa;
+    box-shadow: 0 6px 15px rgba(111, 78, 55, 0.12);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.event-badge {
+    background-color: #efebe9;
+    color: #1F2937;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.card-header i {
+    font-size: 1.25rem;
+    color: #adb5bd;
+}
+
+.text-primary {
+    color: #728156 !important;
+}
+
+.event-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 8px;
+}
+
+.event-desc {
+    font-size: 0.88rem;
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.event-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 0.83rem;
+    color: #6c757d;
+}
+
+.event-meta i {
+    margin-right: 6px;
+    color: #003152;
+}
+
+/* Stlelish for RightColumnForm */
+.registration-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.form-header h2 {
+    font-size: 1.4rem;
+    color: #3e2723;
+    margin-bottom: 4px;
+}
+
+.form-header p {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 6px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 14px;
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+.input-wrapper input, .input-wrapper select {
+    width: 100%;
+    padding: 10px 14px 10px 38px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+    background-color: #fff;
+}
+
+.input-wrapper input:focus, .input-wrapper select:focus {
+    border-color: #677C69;
+    box-shadow: 0 0 0 3px rgba(111, 78, 55, 0.15);
+}
+
+/* Input Validation Classes */
+.form-group.error .input-wrapper input {
+    border-color: #dc3545;
+}
+
+.form-group.success .input-wrapper input {
+    border-color: #198754;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.78rem;
+    margin-top: 5px;
+}
+    /* Stylelish for SubmitButton */
+.btn-submit {
+    width: 100%;
+    background-color: #677C69;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #1A3637;
+}
+
+    /* Stylelish for Map Section */
+.map-section {
+    margin-top: 40px;
+}
+.map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+.map-frame{
+    width: 100%;
+    height: 380px;
+    border: none;
+}
+    /* Mobile View*/
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+.main-layout {
+    width: 100%;
+    max-width: 100%;
+    margin: 25px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+    /* Section headings */
+.section-title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+}
+.section-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+    /* Past Events */
+.previous-event {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.previous-events-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+    /* Upcomingevents and registration form */
+.event-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+    /* Event cards */
+.events-column {
+    width: 100%;
+    gap: 15px;
+}
+.event-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+}
+.event-title {
+    font-size: 1.05rem;
+    line-height: 1.35;
+}
+.event-desc {
+    font-size: 0.85rem;
+    line-height: 1.45;
+}
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 15px;
+    font-size: 0.78rem;
+}
+    /* Registration Form */
+.form-column {
+    width: 100%;
+}
+.registration-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.form-header h2 {
+    font-size: 1.3rem;
+}
+.input-wrapper input,
+.input-wrapper select {
+    width: 100%;
+    box-sizing: border-box;
+}
+.btn-submit {
+    width: 100%;
+}
+    /* Map */
+.map-section {
+    margin-top: 30px;
+}
+
+.map-wrapper iframe {
+    height: 300px;
+}
+}

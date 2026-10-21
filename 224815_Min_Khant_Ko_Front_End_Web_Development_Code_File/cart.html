@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bean Boutique | Cart </title>
+    <!-- Bootstrap Icons CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Toastify Plugin CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--style sheet for cart page-->
+    <link rel="stylesheet" href="css/style_cart.css">
+
+        
+</head>
+<body>
+    <!--Header portion, Header for every pages-->
+    <header class="header-container">
+        <a href="index.html" class="logo"><i class="bi bi-cup-hot-fill"> </i>
+             Bean Boutique</a>
+            <!--Right side of header-->
+        <div class="right-header">
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Our Menu</a></li>
+                    <li><a href="equipment.html">Equipments</a></li>
+                    <li><a href="event.html">Events</a></li>
+                    <li><a href="offer.html">Offers</a></li>
+                </ul>
+            </nav>
+                <!--Shopping Cart Control-->
+            <div class="cart-container">
+                <button class="cart-icon-btn" id="cartToggleBtn"
+                    aria-label="--Shopping Cart">
+                    🛒<span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+                <!-- Hamburger Menu Control(Responsive Screen Size)-->
+            <button class="hamburger" id="hamburgerBtn"
+                aria-label="Toogle Navigation">
+                ☰ Menu
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-cart-container">
+
+            <!-- Cart Header Portion 1-->
+        <div class="cart-header">
+            <h1>Your Shopping Cart</h1>
+                   
+        </div>
+                <!-- Cart Header Portion 2-->
+            <div class="cart-body">
+                <div class="cart-items-list" id="cartItemsContainer">
+                    <!-- Choosen Items will show here-->
+                </div>
+                    <div class="cart-footer" id="cartFooter">
+                        <div class="grand-total">
+                            <span>Grand Total:</span>
+                            <span class="grand-total"
+                            id="grandTotalAmount">
+                            $0.00</span>
+                        </div>
+                    <div class="cart-controls">
+                            <!--Clear Cart Button | To clear the items from the cart-->
+                        <button class="btn-clear-all"
+                            id="btnClearAll"
+                            onclick="clearCart()"> Remove all </button>
+                        <button id="btnCheckout" class="btn-checkout" onclick="checkout()">
+                        Proceed to checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+        <!--Footer portion, Footer for every pages-->
+    <footer class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col brand-col">
+            <a href="index.html" class="footer-logo"><i class="bi bi-cup-hot-fill"> </i>
+                Bean Boutique
+            </a>
+        </div>
+
+        <div class="footer-col links-col">
+            <a href="index.html">Home</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+            <div class="footer-col social-col">
+                <a href="#" aria-label="FaceBook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+            <div class="footer-bottom">
+                <p>&copy; by Min Khant Ko 224815 Strategy First International College.</p>
+            </div>
+    </footer>
+
+        <!-- Toastify Plugin JS-->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <!--Main JS-->
+            <!--Script for all page-->
+        <script src="js/script.js"></script>
+            <!--Script for cat page-->
+        <script src="js/script_cart.js"></script>
+</body>
+</html>
